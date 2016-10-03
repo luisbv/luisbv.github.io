@@ -1,0 +1,419 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Solucion</title><meta name="generator" content="MATLAB 7.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-09-24"><meta name="DC.source" content="Solucion.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="comment">%-------------------- Problema 1 --------------------%</span>
+clc
+clear <span class="string">all</span>
+fprintf(<span class="string">'Evaluar las siguientes expresiones\n'</span>)
+fprintf(<span class="string">'2+3+4+2 = %d\n'</span>,2+3+4+2)
+fprintf(<span class="string">'2+3*4+2 = %d\n'</span>,2+3*4+2)
+fprintf(<span class="string">'(2+3)*4+2 = %d\n'</span>,(2+3)*4+2)
+fprintf(<span class="string">'(2+3)*(4+2) = %d\n'</span>,(2+3)*(4+2))
+fprintf(<span class="string">'1/2(2+3*4^2) = %.2f\n'</span>,1/2*(2+3*4^2))
+fprintf(<span class="string">'\n\n'</span>)
+<span class="comment">%------------------ Fin Problema 1 ------------------%</span>
+
+
+<span class="comment">%-------------------- Problema 2 --------------------%</span>
+clear <span class="string">all</span>
+fprintf(<span class="string">'Traduce las ecuaciones a MATLAB\n'</span>)
+fprintf(<span class="string">'2+3*(6/2) = %.2f\n'</span>,2+3*(6/2))
+fprintf(<span class="string">'(4+6)/(2+3) = %.2f\n'</span>,(4+6)/(2+3))
+fprintf(<span class="string">'(4/2)^5 = %.2f\n'</span>, (4/2)^5)
+fprintf(<span class="string">'(4/2)^(5+1) = %.2f\n'</span>, (4/2)^(5+1))
+fprintf(<span class="string">'(-3)^2 = %.2f\n'</span>, (-3)^2)
+fprintf(<span class="string">'\n\n'</span>)
+<span class="comment">%------------------ Fin Problema 2 ------------------%</span>
+
+
+<span class="comment">%-------------------- Problema 3 --------------------%</span>
+clear <span class="string">all</span>
+fprintf(<span class="string">'Indica cuales son correctas o incorrectas\n'</span>)
+fprintf(<span class="string">'numero_bajas = 6 + 2;\tcorrecta\n'</span>)
+fprintf(<span class="string">'8colores = 8 * 8;\t\tincorrecta\n'</span>)
+fprintf(<span class="string">'numero bajas = 6 + 2;\tincorrecta\n'</span>)
+fprintf(<span class="string">'i = 1;\t\t\t\t\tcorrecta\n'</span>)
+fprintf(<span class="string">'A1234_5678 = i;\t\t\tcorrecta\n'</span>)
+fprintf(<span class="string">'B - 52 = 0;\t\t\t\tincorrecta\n'</span>)
+fprintf(<span class="string">'\n\n'</span>)
+<span class="comment">%------------------ Fin Problema 3 ------------------%</span>
+
+<span class="comment">%-------------------- Problema 4 --------------------%</span>
+clear <span class="string">all</span>
+fprintf(<span class="string">'Resultado de operaciones siguientes\n'</span>)
+x = 5;
+x = 2*x;
+y = x^2;
+x = y/x;
+fprintf(<span class="string">'x = 5;\nx = 2*x;\ny = x^2;\nx = y/x;\n'</span>)
+fprintf(<span class="string">'x = %.2f, y = %d\n'</span>,x,y)
+
+<span class="comment">%------------------ Fin Problema 4 ------------------%</span>
+
+
+<span class="comment">%-------------------- Problema 5 --------------------%</span>
+<span class="comment">% Nuevo archivo que se llame nitrogeno.m</span>
+
+clear <span class="string">all</span>
+clc
+
+n = 1;
+V = 0.419;
+T = 227;
+a = 1.390;
+b = 0.03913;
+R = 0.082;
+P = n*R*T/(V-n*b)-(n^2*a/(V^2));
+
+fprintf(<span class="string">'El valor de la presion P es %.3f atm\n'</span>,P)
+fprintf(<span class="string">'\n\n'</span>)
+<span class="comment">%------------------ Fin Problema 5 ------------------%</span>
+
+
+<span class="comment">%-------------------- Problema 6 --------------------%</span>
+clear <span class="string">all</span>
+fprintf(<span class="string">'Impresion de textos\n'</span>)
+a = 5; b = 48.56; c = -4.7864; d = 11111111111;
+
+fprintf(<span class="string">'El valor de a es %d\n'</span>,a)
+fprintf(<span class="string">'El valor de a es %.2f\n'</span>,a)
+fprintf(<span class="string">'El valor de b es %.0f\n'</span>,b)
+fprintf(<span class="string">'El valor de b es %.2f\n'</span>,b)
+fprintf(<span class="string">'El valor de b es %.5f\n'</span>,b)
+fprintf(<span class="string">'El valor de c es %.4f\n'</span>,c)
+fprintf(<span class="string">'El valor de c es %.1f\n'</span>,c)
+fprintf(<span class="string">'El valor de c es %.3e\n'</span>,d)
+fprintf(<span class="string">'El valor de c es %.0e\n'</span>,d)
+<span class="comment">%------------------ Fin Problema 6 ------------------%</span>
+
+
+<span class="comment">%-------------------- Problema 7 --------------------%</span>
+<span class="comment">% Nuevo archivo que se llame OperBas.m</span>
+clear <span class="string">all</span>
+clc
+a = input(<span class="string">'Introduce el valor de a: '</span>);
+b = input(<span class="string">'Introduce el valor de b: '</span>);
+
+fprintf(<span class="string">'La suma de %d y %d es %d\n'</span>, a,b,a+b)
+fprintf(<span class="string">'La resta de %d y %d es %d\n'</span>, b,a,b-a)
+fprintf(<span class="string">'La multiplicacion de %d por %d es %d\n'</span>, a,b,a*b)
+fprintf(<span class="string">'La division de %d entre %d es %.0f\n'</span>, b,a,b/a)
+<span class="comment">%------------------ Fin Problema 7 ------------------%</span>
+
+
+<span class="comment">%-------------------- Problema 8 --------------------%</span>
+<span class="comment">% Nuevo archivo que se llame farenheit.m</span>
+clc
+clear <span class="string">all</span>
+
+C = input(<span class="string">'Ingrese temperatura en grados Celcius: '</span>);
+
+F = 9/5*C +32;
+
+fprintf(<span class="string">'La temperatura en grados Farhenheit es de %.3f\n'</span>,F);
+
+<span class="comment">%------------------ Fin Problema 8 ------------------%</span>
+
+
+<span class="comment">%-------------------- Problema 9 --------------------%</span>
+<span class="comment">% Nuevo archivo que se llame muelles.m</span>
+clc
+clear <span class="string">all</span>
+m = input(<span class="string">'Ingresa el valor de m: '</span>);
+k1 = input(<span class="string">'Ingresa el valor de k1: '</span>);
+k2 = input(<span class="string">'Ingresa el valor de k2: '</span>);
+
+T = 2*pi*sqrt(m/(k1+k2));
+
+fprintf(<span class="string">'El periodo T es: %.3f\n'</span>,T);
+<span class="comment">%------------------ Fin Problema 9 ------------------%</span>
+
+
+<span class="comment">%-------------------- Problema 10 --------------------%</span>
+<span class="comment">% Nuevo archivo que se llame resistencia.m</span>
+clc
+clear <span class="string">all</span>
+
+R1 = input(<span class="string">'Introduce el valor de R1: '</span>);
+R2 = input(<span class="string">'Introduce el valor de R2: '</span>);
+R3 = input(<span class="string">'Introduce el valor de R3: '</span>);
+
+Req = 1 / (1/R1+1/R2+1/R3);
+
+fprintf(<span class="string">'La resistencia equivalente (Req) es: %.3f\n'</span>,Req);
+<span class="comment">%------------------ Fin problema 10 ------------------%</span>
+
+
+<span class="comment">%-------------------- Problema 11 --------------------%</span>
+clear <span class="string">all</span>
+<span class="comment">% Nuevo archivo que se llame GasIdeal.m</span>
+
+n = input(<span class="string">'Introduce el numero de moles: '</span>);
+T = input(<span class="string">'Introduce la temperatura en grados Celcius: '</span>);
+V = input(<span class="string">'Introduce el volumen en litros: '</span>);
+R = 0.082; <span class="comment">% unidades litro-atm/(mol-K)</span>
+P = n*R*T/V;
+fprintf(<span class="string">'El valor de la presion es: %.3f'</span>,P)
+<span class="comment">%------------------ Fin problema 11 ------------------%</span>
+</pre><pre class="codeoutput">Evaluar las siguientes expresiones
+2+3+4+2 = 11
+2+3*4+2 = 16
+(2+3)*4+2 = 22
+(2+3)*(4+2) = 30
+1/2(2+3*4^2) = 25.00
+
+
+Traduce las ecuaciones a MATLAB
+2+3*(6/2) = 11.00
+(4+6)/(2+3) = 2.00
+(4/2)^5 = 32.00
+(4/2)^(5+1) = 64.00
+(-3)^2 = 9.00
+
+
+Indica cuales son correctas o incorrectas
+numero_bajas = 6 + 2;	correcta
+8colores = 8 * 8;		incorrecta
+numero bajas = 6 + 2;	incorrecta
+i = 1;					correcta
+A1234_5678 = i;			correcta
+B - 52 = 0;				incorrecta
+
+
+Resultado de operaciones siguientes
+x = 5;
+x = 2*x;
+y = x^2;
+x = y/x;
+x = 10.00, y = 100
+El valor de la presion P es 41.083 atm
+
+
+Impresion de textos
+El valor de a es 5
+El valor de a es 5.00
+El valor de b es 49
+El valor de b es 48.56
+El valor de b es 48.56000
+El valor de c es -4.7864
+El valor de c es -4.8
+El valor de c es 1.111e+10
+El valor de c es 1e+10
+</pre><pre class="codeoutput">Error using input
+Cannot call INPUT from EVALC.
+
+Error in Solucion (line 91)
+a = input('Introduce el valor de a: ');
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.14<br></p></div><!--
+##### SOURCE BEGIN #####
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Problema 1 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+clc
+clear all
+fprintf('Evaluar las siguientes expresiones\n')
+fprintf('2+3+4+2 = %d\n',2+3+4+2)
+fprintf('2+3*4+2 = %d\n',2+3*4+2)
+fprintf('(2+3)*4+2 = %d\n',(2+3)*4+2)
+fprintf('(2+3)*(4+2) = %d\n',(2+3)*(4+2))
+fprintf('1/2(2+3*4^2) = %.2f\n',1/2*(2+3*4^2))
+fprintf('\n\n')
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fin Problema 1 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Problema 2 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+clear all
+fprintf('Traduce las ecuaciones a MATLAB\n')
+fprintf('2+3*(6/2) = %.2f\n',2+3*(6/2))
+fprintf('(4+6)/(2+3) = %.2f\n',(4+6)/(2+3))
+fprintf('(4/2)^5 = %.2f\n', (4/2)^5)
+fprintf('(4/2)^(5+1) = %.2f\n', (4/2)^(5+1))
+fprintf('(-3)^2 = %.2f\n', (-3)^2)
+fprintf('\n\n')
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fin Problema 2 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Problema 3 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+clear all
+fprintf('Indica cuales son correctas o incorrectas\n')
+fprintf('numero_bajas = 6 + 2;\tcorrecta\n')
+fprintf('8colores = 8 * 8;\t\tincorrecta\n')
+fprintf('numero bajas = 6 + 2;\tincorrecta\n')
+fprintf('i = 1;\t\t\t\t\tcorrecta\n')
+fprintf('A1234_5678 = i;\t\t\tcorrecta\n')
+fprintf('B - 52 = 0;\t\t\t\tincorrecta\n')
+fprintf('\n\n')
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fin Problema 3 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Problema 4 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+clear all
+fprintf('Resultado de operaciones siguientes\n')
+x = 5;
+x = 2*x;
+y = x^2;
+x = y/x;
+fprintf('x = 5;\nx = 2*x;\ny = x^2;\nx = y/x;\n')
+fprintf('x = %.2f, y = %d\n',x,y)
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fin Problema 4 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Problema 5 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+% Nuevo archivo que se llame nitrogeno.m
+
+clear all
+clc
+
+n = 1;
+V = 0.419;
+T = 227;
+a = 1.390;
+b = 0.03913;
+R = 0.082;
+P = n*R*T/(V-n*b)-(n^2*a/(V^2));
+
+fprintf('El valor de la presion P es %.3f atm\n',P)
+fprintf('\n\n')
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fin Problema 5 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Problema 6 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+clear all
+fprintf('Impresion de textos\n')
+a = 5; b = 48.56; c = -4.7864; d = 11111111111;
+
+fprintf('El valor de a es %d\n',a)
+fprintf('El valor de a es %.2f\n',a)
+fprintf('El valor de b es %.0f\n',b)
+fprintf('El valor de b es %.2f\n',b)
+fprintf('El valor de b es %.5f\n',b)
+fprintf('El valor de c es %.4f\n',c)
+fprintf('El valor de c es %.1f\n',c)
+fprintf('El valor de c es %.3e\n',d)
+fprintf('El valor de c es %.0e\n',d)
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fin Problema 6 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Problema 7 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+% Nuevo archivo que se llame OperBas.m
+clear all
+clc
+a = input('Introduce el valor de a: ');
+b = input('Introduce el valor de b: ');
+
+fprintf('La suma de %d y %d es %d\n', a,b,a+b)
+fprintf('La resta de %d y %d es %d\n', b,a,b-a)
+fprintf('La multiplicacion de %d por %d es %d\n', a,b,a*b)
+fprintf('La division de %d entre %d es %.0f\n', b,a,b/a)
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fin Problema 7 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Problema 8 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+% Nuevo archivo que se llame farenheit.m
+clc
+clear all
+
+C = input('Ingrese temperatura en grados Celcius: ');
+
+F = 9/5*C +32;
+
+fprintf('La temperatura en grados Farhenheit es de %.3f\n',F);
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fin Problema 8 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Problema 9 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+% Nuevo archivo que se llame muelles.m
+clc
+clear all
+m = input('Ingresa el valor de m: ');
+k1 = input('Ingresa el valor de k1: ');
+k2 = input('Ingresa el valor de k2: ');
+
+T = 2*pi*sqrt(m/(k1+k2));
+
+fprintf('El periodo T es: %.3f\n',T);
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fin Problema 9 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Problema 10 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+% Nuevo archivo que se llame resistencia.m
+clc
+clear all
+
+R1 = input('Introduce el valor de R1: ');
+R2 = input('Introduce el valor de R2: ');
+R3 = input('Introduce el valor de R3: ');
+
+Req = 1 / (1/R1+1/R2+1/R3);
+
+fprintf('La resistencia equivalente (Req) es: %.3f\n',Req);
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fin problema 10 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Problema 11 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+clear all
+% Nuevo archivo que se llame GasIdeal.m
+
+n = input('Introduce el numero de moles: ');
+T = input('Introduce la temperatura en grados Celcius: ');
+V = input('Introduce el volumen en litros: ');
+R = 0.082; % unidades litro-atm/(mol-K)
+P = n*R*T/V;
+fprintf('El valor de la presion es: %.3f',P)
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fin problema 11 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH%
+##### SOURCE END #####
+--></body></html>
