@@ -17,8 +17,12 @@
     <!-- Custom styles for this template -->
     <link href="../../assets/css/main.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
+    <script type="text/javascript">
+    $("#card").flip();
+    </script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -142,6 +146,15 @@
       </div><!-- /col-lg-6 -->
     </div><!-- /row -->
   </div><!-- /container -->
+
+  <div id="card">
+  <div class="front">
+    Front content
+  </div>
+  <div class="back">
+    Back content
+  </div>
+</div>
 
 <!-- +++++ Footer Section +++++ -->
 
